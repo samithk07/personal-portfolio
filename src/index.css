@@ -1,0 +1,170 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-dark-bg text-gray-100;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width:none;
+}
+
+/* ::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+} */
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-neon-blue to-neon-purple rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply from-neon-blue/80 to-neon-purple/80;
+}
+/* Line clamping utilities */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* Image optimization */
+img {
+  content-visibility: auto;
+}
+
+/* Smooth image loading */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(to right, #1a1a2e 4%, #16213e 25%, #1a1a2e 36%);
+  background-size: 1000px 100%;
+}
+/* Custom animations */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-gradient-flow {
+  background-size: 200% 200%;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+/* Image optimization */
+img {
+  content-visibility: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .relative.w-80 {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .fixed.inset-0 .absolute {
+    /* Reduce border thickness on mobile */
+    &.h-1 {
+      height: 0.5px;
+    }
+    &.w-1 {
+      width: 0.5px;
+    }
+  }
+  
+  .absolute.w-32 {
+    width: 80px;
+    height: 80px;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Form validation styles */
+input:invalid, textarea:invalid {
+  border-color: #ef4444;
+}
+
+input:valid, textarea:valid {
+  border-color: #10b981;
+}
