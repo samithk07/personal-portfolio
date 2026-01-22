@@ -7,6 +7,9 @@ import {
   CommandLineIcon,
 } from '@heroicons/react/24/outline';
 
+// ✅ IMPORT IMAGE (PRODUCTION SAFE)
+import profileImg from '../assets/pofile/ChatGPT Image Jan 21, 2026, 10_03_48 PM.png';
+
 const About = () => {
   const skills = [
     {
@@ -55,7 +58,7 @@ const About = () => {
 
   return (
     <section className="pt-20 pb-16 relative">
-      {/* Animated Gradient Borders */}
+      {/* Animated Gradient Border */}
       <div className="fixed inset-0 -z-10 pointer-events-none">
         {['top', 'bottom'].map((pos, i) => (
           <div
@@ -64,9 +67,7 @@ const About = () => {
             style={{
               background:
                 'linear-gradient(90deg, transparent, #00f3ff, #9d4edd, transparent)',
-              animation: `gradientFlow 4s linear infinite ${
-                i ? 'reverse' : ''
-              }`,
+              animation: `gradientFlow 4s linear infinite ${i ? 'reverse' : ''}`,
             }}
           />
         ))}
@@ -77,9 +78,7 @@ const About = () => {
             style={{
               background:
                 'linear-gradient(180deg, transparent, #00f3ff, #9d4edd, transparent)',
-              animation: `gradientFlow 4s linear infinite ${
-                i ? 'reverse' : ''
-              }`,
+              animation: `gradientFlow 4s linear infinite ${i ? 'reverse' : ''}`,
             }}
           />
         ))}
@@ -123,7 +122,7 @@ const About = () => {
 
               <div className="relative w-full h-full rounded-full overflow-hidden p-1 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-blue">
                 <img
-                  src="src/assets/pofile/ChatGPT Image Jan 21, 2026, 10_03_48 PM.png"
+                  src={profileImg}
                   alt="Samith - Frontend Developer"
                   className="w-full h-full rounded-full object-cover transition-transform duration-500 hover:scale-110"
                 />
@@ -143,15 +142,12 @@ const About = () => {
 
             <p className="text-gray-300 text-lg leading-relaxed mb-10">
               I am a frontend developer focused on building clean, responsive,
-              and high-performance interfaces using modern technologies such as
-              React and Tailwind CSS. I emphasize maintainable code, smooth
-              interactions, and scalable UI architecture.
+              and scalable interfaces using React and Tailwind CSS, with strong
+              attention to performance and user experience.
             </p>
 
             {/* Skills */}
-            <h3 className="text-2xl font-semibold mb-4">
-              Technical Skills
-            </h3>
+            <h3 className="text-2xl font-semibold mb-4">Technical Skills</h3>
 
             <div className="grid grid-cols-2 gap-4">
               {skills.map((skill, index) => {
