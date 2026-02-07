@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from '../components/ProjectCard';
-
-// ✅ IMPORT PROJECT IMAGES (IMPORTANT)
 import everlastImg from '../assets/project/Screenshot 2026-01-20 160455.png';
 import fitclubImg from '../assets/project/Screenshot 2025-10-06 095500.png';
 import trivagoImg from '../assets/project/IMG-20251006-WA0012[1].jpg';
@@ -119,7 +117,10 @@ const Projects = () => {
           ))}
         </div>
       </div>
+
+      
     </section>
+    
   );
 };
 
