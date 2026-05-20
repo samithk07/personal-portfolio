@@ -37,7 +37,7 @@ const Projects = () => {
         'Drag & Drop',
       ],
       githubUrl: 'https://github.com/samithk07/task-manager',
-      liveUrl: 'https://taskflow-samith.vercel.app/',
+      liveUrl: 'https://fitclub-a4db.vercel.app/',
       image: fitclubImg,
     },
     {
