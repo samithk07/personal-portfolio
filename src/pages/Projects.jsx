@@ -21,7 +21,7 @@ const Projects = () => {
         'SEO',
       ],
       githubUrl: 'https://github.com/samithk07/everlastwatersolution-',
-      liveUrl: 'https://everlastwatersolution.vercel.app/',
+      liveUrl: 'https://everlast-two.vercel.app/',
       image: everlastImg,
     },
     {
