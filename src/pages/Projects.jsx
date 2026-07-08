@@ -4,6 +4,7 @@ import ProjectCard from '../components/ProjectCard';
 import everlastImg from '../assets/project/Screenshot 2026-01-20 160455.png';
 import fitclubImg from '../assets/project/Screenshot 2025-10-06 095500.png';
 import trivagoImg from '../assets/project/IMG-20251006-WA0012[1].jpg';
+import rawFilmsImg from "../assets/project/Screenshot 2026-07-08 124407.png";
 
 const Projects = () => {
   const projects = [
@@ -53,8 +54,23 @@ const Projects = () => {
       ],
       githubUrl: 'https://github.com/samithk07/weather-dashboard',
       liveUrl: 'https://weather-samith.vercel.app/',
-      image: trivagoImg,
+      image:trivagoImg,
     },
+    {
+  id: 4,
+  title: "Raw-Films",
+  description:
+    "A premium cinematic photography portfolio website with elegant animations, immersive galleries, and a fully responsive design.",
+  tech: [
+    "React",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Responsive Design",
+  ],
+  githubUrl: "https://github.com/samithk07/raw-films.git",
+  liveUrl: "https://raw-films.vercel.app/",
+  image: rawFilmsImg,
+},
   ];
 
   const [filter, setFilter] = useState('all');
