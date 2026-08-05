@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
   CodeBracketIcon,
-  DevicePhoneMobileIcon,
-  CpuChipIcon,
+  CircleStackIcon,
+  ServerIcon,
   CommandLineIcon,
 } from '@heroicons/react/24/outline';
 
@@ -13,11 +13,39 @@ import profileImg from '../assets/pofile/ChatGPT Image Jan 21, 2026, 10_03_48 PM
 const About = () => {
   const skills = [
     {
+      name: 'MongoDB',
+      level: 85,
+      icon: CircleStackIcon,
+      color: 'text-green-400',
+      barColor: 'bg-green-500',
+    },
+    {
+      name: 'Express.js',
+      level: 85,
+      icon: ServerIcon,
+      color: 'text-gray-300',
+      barColor: 'bg-gray-400',
+    },
+    {
       name: 'React',
       level: 90,
       icon: CodeBracketIcon,
       color: 'text-cyan-400',
       barColor: 'bg-cyan-500',
+    },
+    {
+      name: 'Node.js',
+      level: 85,
+      icon: ServerIcon,
+      color: 'text-lime-400',
+      barColor: 'bg-lime-500',
+    },
+    {
+      name: 'REST API / JWT Auth',
+      level: 80,
+      icon: CommandLineIcon,
+      color: 'text-yellow-400',
+      barColor: 'bg-yellow-500',
     },
     {
       name: 'Tailwind CSS',
@@ -27,37 +55,23 @@ const About = () => {
       barColor: 'bg-teal-500',
     },
     {
-      name: 'JavaScript',
-      level: 85,
-      icon: CpuChipIcon,
-      color: 'text-yellow-400',
-      barColor: 'bg-yellow-500',
-    },
-    {
-      name: 'Responsive Design',
-      level: 90,
-      icon: DevicePhoneMobileIcon,
-      color: 'text-purple-400',
-      barColor: 'bg-purple-500',
-    },
-    {
-      name: 'UI Animations',
-      level: 80,
-      icon: CodeBracketIcon,
-      color: 'text-pink-400',
-      barColor: 'bg-pink-500',
-    },
-    {
       name: 'Git & GitHub',
       level: 85,
       icon: CommandLineIcon,
       color: 'text-orange-400',
       barColor: 'bg-orange-500',
     },
+    {
+      name: 'JavaScript (ES6+)',
+      level: 85,
+      icon: CodeBracketIcon,
+      color: 'text-purple-400',
+      barColor: 'bg-purple-500',
+    },
   ];
 
   return (
-    <section className="pt-20 pb-16 relative">
+    <section className="pt-16 sm:pt-20 pb-16 relative">
       {/* Animated Gradient Border */}
       <div className="fixed inset-0 -z-10 pointer-events-none">
         {['top', 'bottom'].map((pos, i) => (
@@ -107,11 +121,11 @@ const About = () => {
         ))}
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center md:items-start">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center md:items-start">
           {/* Profile Image */}
           <div className="flex justify-center md:justify-start items-center">
-            <div className="relative w-80 h-80 md:mt-8">
+            <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 md:mt-8">
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
@@ -123,7 +137,7 @@ const About = () => {
               <div className="relative w-full h-full rounded-full overflow-hidden p-1 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-blue">
                 <img
                   src={profileImg}
-                  alt="Samith - Frontend Developer"
+                  alt="Samith - MERN Stack Developer"
                   className="w-full h-full rounded-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
@@ -135,21 +149,26 @@ const About = () => {
             initial={{ x: 20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
+            className="text-center md:text-left"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
               About <span className="text-neon-blue">Me</span>
             </h2>
 
-            <p className="text-gray-300 text-lg leading-relaxed mb-10">
-              I am a frontend developer focused on building clean, responsive,
-              and scalable interfaces using React and Tailwind CSS, with strong
-              attention to performance and user experience.
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8 sm:mb-10">
+              I am a MERN stack developer focused on building full-stack web
+              applications — from designing REST APIs with Node.js, Express,
+              and MongoDB to crafting clean, responsive, and scalable
+              interfaces with React and Tailwind CSS, with strong attention
+              to performance and user experience.
             </p>
 
             {/* Skills */}
-            <h3 className="text-2xl font-semibold mb-4">Technical Skills</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-4">
+              Technical Skills
+            </h3>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {skills.map((skill, index) => {
                 const Icon = skill.icon;
 
