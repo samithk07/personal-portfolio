@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
-import yourImage from '../assets/pofile/pip.jpg';
+import yourImage from '../assets/pofile/backgroung.png';
 import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
